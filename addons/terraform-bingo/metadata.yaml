@@ -26,17 +26,23 @@ completeCloudName: Bingo Cloud
 # name: Environment variable name when authenticating Terraform, like https://github.com/oam-dev/terraform-controller/blob/master/controllers/provider/credentials.go#L59
 # secretKey: Secret key when storing authentication information in a Kubernetes, like https://github.com/oam-dev/terraform-controller/blob/master/controllers/provider/credentials.go#L109.
 cloudProperties:
-  - name: SSO_ENDPOINT
-    secretKey: ssoEndpoint
-    description: SSO地址
-  - name: ACCESS_TOKEN
-    secretKey: accessToken
-    description: IAM颁发的用户凭证
+  - name: IAM_ENDPOINT
+    secretKey: iamEndpoint
+    description: IAM地址
   - name: CMP_ENDPOINT
     secretKey: cmpEndpoint
     description: CMP地址
-  - name: CMP_CLIENT_SECRET
-    secretKey: cmpClientSecret
-    description: IAM颁发给CMP的客户端凭证
+  - name: IAM_CLIENT_ID
+      secretKey: iamClientId
+      description: IAM颁发的客户端Id
+  - name: IAM_CLIENT_SECRET
+    secretKey: iamClientSecret
+    description: IAM颁发的客户端Secret
+  - name: USER_NAME
+    secretKey: userName
+    description: 用户名
+  - name: PASSWORD
+    secretKey: password
+    description: 密码
 
 invisible: false

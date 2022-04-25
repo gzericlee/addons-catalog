@@ -11,13 +11,17 @@ output: {
 		}
 		type: "Opaque"
 		stringData: credentials: strings.Join([
-							"ssoEndpoint: " + parameter.SSO_ENDPOINT,
-						
-							"accessToken: " + parameter.ACCESS_TOKEN,
+							"iamEndpoint: " + parameter.IAM_ENDPOINT,
 
-                            "cmpEndpoint: " + parameter.CMP_ENDPOINT,
+							"cmpEndpoint: " + parameter.CMP_ENDPOINT,
+
+						    "iamClientId: " + parameter.IAM_CLIENT_ID,
+
+							"iamClientSecret: " + parameter.IAM_CLIENT_SECRET,
 						
-							"cmpClientSecret: " + parameter.CMP_CLIENT_SECRET,
+							"userName: " + parameter.USER_NAME,
+
+							"password: " + parameter.PASSWORD,
 						], "\n")
 	}
 }
