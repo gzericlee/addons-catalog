@@ -1,0 +1,42 @@
+name: terraform-bingo
+version: 1.0.0
+description: Kubernetes Terraform Controller Provider for Bingo Cloud
+url: https://github.com/oam-dev/terraform-controller
+
+tags:
+  - Terraform Controller Provider
+  - IaC
+  - Cloud Resources
+
+deployTo:
+  control_plane: true
+  runtime_cluster: false
+
+dependencies:
+  - name: terraform
+
+# -------------------------------------Configuration Metadata for a Terraform Addon-------------------------------------
+# provider short name
+shortCloudName: bingo
+
+# The Cloud name of the provider
+completeCloudName: Bingo Cloud
+
+# When enabling a Terraform provider, these properties need to set for authentication. For Tencent Cloud,
+# name: Environment variable name when authenticating Terraform, like https://github.com/oam-dev/terraform-controller/blob/master/controllers/provider/credentials.go#L59
+# secretKey: Secret key when storing authentication information in a Kubernetes, like https://github.com/oam-dev/terraform-controller/blob/master/controllers/provider/credentials.go#L109.
+cloudProperties:
+  - name: SSO_ENDPOINT
+    secretKey: ssoEndpoint
+    description: SSO地址
+  - name: ACCESS_TOKEN
+    secretKey: accessToken
+    description: IAM颁发的用户凭证
+  - name: CMP_ENDPOINT
+    secretKey: cmpEndpoint
+    description: CMP地址
+  - name: CMP_CLIENT_SECRET
+    secretKey: cmpClientSecret
+    description: IAM颁发给CMP的客户端凭证
+
+invisible: false

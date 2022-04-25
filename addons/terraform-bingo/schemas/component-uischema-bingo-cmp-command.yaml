@@ -1,0 +1,30 @@
+- jsonKey: writeConnectionSecretToRef
+  disable: true
+- jsonKey: providerRef
+  disable: true
+- jsonKey: region
+  disable: true
+- jsonKey: deleteResource
+  disable: true
+- jsonKey: host_type
+  label: 宿主机类型
+  uiType: Select
+  validate:
+    required: true
+    defaultValue: 1
+    options:
+      - label: 虚拟机
+        value: 1
+      - label: 物理机
+        value: 2
+  sort: 1
+- jsonKey: content
+  label: 指令内容
+  validate:
+    required: true
+  sort: 2
+- jsonKey: instance_ids
+  label: 实例编号，多个用逗号分割
+  validate:
+    required: true
+  sort: 3

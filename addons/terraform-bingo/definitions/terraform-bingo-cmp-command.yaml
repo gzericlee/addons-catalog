@@ -1,0 +1,55 @@
+apiVersion: core.oam.dev/v1beta1
+kind: ComponentDefinition
+metadata:
+  annotations:
+    definition.oam.dev/description: CMP Command
+  creationTimestamp: null
+  labels:
+    type: terraform
+  name: bingo-cmp-command
+  namespace: vela-system
+spec:
+  schematic:
+    terraform:
+      providerRef:
+        name: bingo
+        namespace: default
+      configuration: |
+        terraform {
+          required_providers {
+            bingo = {
+              source = "gzericlee/bingo"
+            }
+          }
+        }
+        
+        resource "bingo_cmp_command" "cmd" {
+          host_type   	= var.host_type
+          content     	= var.content
+          instance_ids	= var.instance_ids 
+        }
+        
+        variable "host_type" {
+          default     = "1"
+          type        = string
+        }
+        
+        variable "content" {
+          default     = ""
+          type        = string
+        }
+        
+        variable "instance_ids" {
+          default     = ""
+          type        = string
+        }
+        
+        output "TASK_ID" {
+          description = "TaskID"
+          value = bingo_cmp_command.cmd.task_id
+        }
+  workload:
+    definition:
+      apiVersion: terraform.core.oam.dev/v1beta1
+      kind: Configuration
+status: { }
