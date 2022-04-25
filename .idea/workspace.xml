@@ -7,8 +7,6 @@
     <list default="true" id="d7af8459-9b98-4874-aeb1-ff795328b372" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/terraform-bingo/metadata.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/addons/terraform-bingo/metadata.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/terraform-bingo/resources/bingo-account-creds.cue" beforeDir="false" afterPath="$PROJECT_DIR$/addons/terraform-bingo/resources/bingo-account-creds.cue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/terraform-bingo/resources/parameter.cue" beforeDir="false" afterPath="$PROJECT_DIR$/addons/terraform-bingo/resources/parameter.cue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
