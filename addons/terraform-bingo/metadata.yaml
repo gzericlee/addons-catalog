@@ -33,8 +33,8 @@ cloudProperties:
     secretKey: cmpEndpoint
     description: CMP地址
   - name: IAM_CLIENT_ID
-      secretKey: iamClientId
-      description: IAM颁发的客户端Id
+    secretKey: iamClientId
+    description: IAM颁发的客户端Id
   - name: IAM_CLIENT_SECRET
     secretKey: iamClientSecret
     description: IAM颁发的客户端Secret
